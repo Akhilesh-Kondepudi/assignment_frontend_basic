@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title> Image Map </title>
+    </head>
+    <style>
+        h1{
+            text-align: center;
+            background-color: aquamarine;
+            color: black;
+            padding: 5px;
+            border-radius: 3px;
+        }
+    </style>
+    <body>
+        <h1> Welcome to Image Map </h1>
+        <img onmousemove="getCoords(event)" src="ImageMap_Task_Technologies.png" usemap="#workmap"/>
+        <map name="workmap">
+            <area shape="rect" coords="8,96,149,255" href="https://jquery.com/">
+            <area shape="rect" coords="175,111,389,247" href="https://angular.io/">
+            <area shape="rect" coords="388,113,576,246" href="https://getbootstrap.com/">
+        </map>
+        <h1 id="x">X= Y = </h1>
+        <script>
+            function   getCoords(e)
+            {
+                var obj = document.getElementById("x");
+                obj.innerText  = "X = " + e.clientX + ",  Y = " + e.clientY;
+            }	
+         </script>
+    </body>
+</html>
