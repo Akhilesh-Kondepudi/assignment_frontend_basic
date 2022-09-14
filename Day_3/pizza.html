@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title> Welcome | Order</title>
+    </head>
+    <style>
+        #a{
+            background-color: blanchedalmond;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 15px;
+            width: 600px;
+            padding: 5px;
+            padding-left: 15px;
+            padding-bottom: 15px;
+        }
+
+        #b{
+            margin-left: 15px;
+            width: 600px;
+            padding: 5px;
+            padding-left: 15px;
+            padding-bottom: 15px;
+            background-color: rgba(255, 255, 255, 0.826);
+        }
+
+        #c{
+            background-color: red;
+            margin-left: 15px;
+            height: 50px;
+            width: 620px;
+            border: 1px solid white;
+            color:  white;
+            font-size: larger;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        body{
+            background-image: url('slider2.jpg');
+        }
+
+    </style>
+    <body>
+        <div id="a">
+            <h1> WELCOME TO ITALIAN PIZZA! </h1>
+            <span>We deliver pizza in 40 minutes max. If not - Pizza's on us!</span>
+        </div>
+        <div id="b">
+        <form action="Login.asp" method="get">
+            
+            <label>Email</label> <br/>
+            <input type="text"/> <br/><br/>
+
+            <label>Phone</label> <br/>
+            <input type="text" placeholder="Area" size="3"/>
+            <input type="text" placeholder="Local" size="6"/>
+            <input type="text" placeholder="Local"/> 
+
+            <br/><br/>
+
+            <label>Number of slices</label> <br/>
+            <input type="text">
+
+            <br/><br/>
+
+            <label>Pizza Size</label><br/>
+            <input type="radio" name="s1">
+            <label>8-inch</label>
+            <input type="radio" name="s1">
+            <label>10-inch</label>
+            <input type="radio" name="s1">
+            <label>12-inch</label>
+            <input type="radio" name="s1">
+            <label>14-inch</label>
+
+            <br/><br/>
+
+            <label>Toppings</label> <br/>
+            <input type="checkbox">
+            <label>Pepperoni</label>
+            <input type="checkbox">
+            <label>Onions</label>
+            <input type="checkbox">
+            <label>Mushrooms</label>
+            <input type="checkbox">
+            <label>Sausage</label>
+
+            <br/><br/>
+
+            <label>*</label>
+            <input type="checkbox">
+            <label>I agree to the TERMS AND CONDITIONS</label>
+        </div>
+        <br/>
+            <input id="c" type="submit" value="Order Now">
+        </form>
+    <br/>
+    </body>
+</html>
