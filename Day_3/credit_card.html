@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <title> Payment </title>
+        <style>
+            body{
+                padding-left: 27.5%;
+                padding-top: 70px;
+            }
+            #hd{
+                background-color: rgb(87, 194, 236);
+                color: white;
+                font-family:Arial, Helvetica, sans-serif;
+                padding: 10px;
+                width: 500px;
+            }
+            form{
+                border-left: 1px solid gray;
+                border-right: 1px solid gray;
+                width: 498px;
+                padding: 10px;
+                margin-bottom: 0;
+                color: rgba(81, 101, 202, 0.872);
+                font-family: Verdana, Geneva, Tahoma, sans-serif
+            }
+            #pwd{
+                width: 80px;
+            }
+            #cv{
+                float: right;
+                width: 200px;
+                height: 50px;
+                margin-bottom: 10px;
+            }
+            #b{
+                font-size:x-small;
+            }
+            #c{
+                font-size:x-small;
+                float: right;
+            }
+            #txt{
+                width: 490px;
+                height: 30px;
+            }
+            #sl{
+                float: left;
+            }
+            #slc{
+                padding: 5px;
+                margin-top: 3px;
+                margin-right: 2px;
+                border-radius: 2px;
+                background-color: rgb(237, 237, 238);
+            }
+            #ch{
+                background-color: rgb(237, 237, 238);
+                text-align: center;
+                margin: 0;
+                padding: 10px;
+                width: 498px;
+                border-left: 1px solid gray;
+                border-right: 1px solid gray;
+                border-bottom: 1px solid gray;
+            }
+            #btn{
+                background-color: orange;
+                color: white;
+                border: 0px;
+                border-radius: 3px;
+                font-weight: bold;
+                padding: 10px;
+                text-align: center;
+                margin-left: 170px;
+                margin-top: 10px;
+                width: 200px;
+            }
+            #btn:hover{
+                background-color: rgba(244, 178, 56, 0.909);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="hd">
+            <img width="20px"src="https://cdn-icons-png.flaticon.com/512/61/61048.png"/>
+            <span> This is a secure 128-bit SSL Encrypted payment. You're safe.</span>
+        </div>
+        <form method="get">
+            <input type="radio" name="c"/>
+            <label> Credit Card (Visa, Mastercard) </label>
+            <img width="80px"src="https://www.jawoollam.com/wp-content/uploads/mastercard-visa.png"/>
+            <input type="radio" name="c"/>
+            <label> PayPal </label>
+            <img width="20px"src="https://cdn-icons-png.flaticon.com/512/174/174861.png"/>
+            <br/><br/>
+            <label>Card number</label>
+            <label id="b"> The 16 digits on front of your card</label>
+            <br/>
+            <input id="txt" type="text"/>
+            <br/><br/>
+            <div id="sl">
+            <label> Expiration date</label><br/>
+            <select id="slc">
+                <option>Month</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+            <label>/</label>
+            <select id="slc">
+                <option>Year</option>
+                <option>2001</option>
+                <option>2002</option>
+                <option>2003</option>
+                <option>2004</option>
+                <option>2005</option>
+                <option>2006</option>
+                <option>2007</option>
+                <option>2008</option>
+                <option>2009</option>
+                <option>2010</option>
+                <option>2011</option>
+                <option>2012</option>
+            </select>
+            </div>
+            <div id="cv">
+            <label>CVV2/CVC2</label>
+            <br/>
+            <input id="pwd" type="password"/>
+            <span id="c"> The last 3 digits displayed on the back of your card</span>
+            </div>
+            <br/><br/><br/><br/>
+            <label>Full Name on a card</label>
+            <br/>
+            <input id="txt" type="text"/>
+        </form>
+        <p id="ch"> You will be charged 29.00 every month</p>
+    <input id="btn"type="button" value="Complete Transaction"/>
+    </body>
+</html>
