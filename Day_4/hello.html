@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Hello</title>
+        <style>
+            body{
+                background-color: cl;
+            }
+        </style>
+    </head>
+    <body id="bod">
+        <h1> Hello </h1>
+        <script>
+            var clObj = localStorage.getItem("cl");
+            var bdObj = document.getElementById("bod");
+            bdObj.style.backgroundColor = clObj;
+        </script>
+    </body>
+</html>

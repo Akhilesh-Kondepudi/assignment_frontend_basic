@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Color</title>
+    </head>
+    <body>
+        <label> Select a color : </label>
+        <select id="cr"> 
+            <option> Blue </option>
+            <option> Green </option>
+            <option> Yellow </option>
+            <option> Orange </option>
+            <option> Red </option>
+        </select>
+        <input type="button" value="Update" onclick="f1()" />
+        <br/>
+        <a href="hello.html"> Link </a>
+        <script>
+            function f1(){
+                var clrObj = document.getElementById("cr");
+                localStorage.setItem("cl",clrObj.value);
+            }
+        </script>
+    </body>
+</html>
