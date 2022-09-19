@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title> Welcome | Bill </title>
+        <style>
+            tb{
+                text-align: center;
+                
+            }
+            form{
+                width: 350px;
+                border: 5px solid deeppink;
+                border-radius: 3px;
+                padding: 15px;
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <br/>
+        <form>
+            <br/>
+            <table align="center "id="tb" cellspacing="10px">
+                <tr>
+                    <td><label>Product Name: </label></td>
+                    <td><input type="text" id="name"/></td>
+                </tr>
+                <tr>
+                    <td><label>Unit Price: </label></td>
+                    <td><input type="text" id="price"/></td>
+                </tr>
+                <tr>
+                    <td><label>Quantity: </label></td>
+                    <td><input type="text" id="quantity"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Get Total" onclick="cal()"/></td>
+                    <td></td>
+                </tr>
+                    
+            </table>
+            <br/>
+            <p id="para"></p>
+        </form>
+        <script>
+            function cal(){
+                priceObj = document.getElementById("price");
+                quantObj = document.getElementById("quantity");
+                paraObj = document.getElementById("para");
+
+                paraObj.innerText = "Toatal Amount : " + priceObj.value * quantObj.value;
+            }
+        </script>
+    </body>
+</html>
