@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>JSON | INPUT</title>
+    </head>
+    <body>
+        <h1>Working with JSON</h1><hr/>
+        <form>
+            <label>Empno : </label>
+            <input id ="getemp" type="text"/><br/><br/>
+            <label>Ename : </label>
+            <input id ="getename" type="text"/><br/><br/>
+            <label>Job : </label>
+            <input id ="getjob" type="text"/><br/><br/>
+            <label>Salary : </label>
+            <input id ="getsal" type="number"/><br/><br/>
+            <label>Deptno : </label>
+            <input id ="getdep" type="number"/><br/><br/>
+            <label>Input for string format : </label>
+            <input id = "getstr" type="text"><br/><br/>
+            <input type="button" value="Convert to JSON" onclick="convert()"/>
+            <input type="button" value="Convert to Object" onclick="convertJSON()"/>
+        </form>
+        <p id="print"></p>
+        <script>
+            function convert(){
+
+                var obj = {empno: parseInt(document.getElementById("getemp").value),
+                ename: document.getElementById("getename").value,
+                job: document.getElementById("getjob").value,
+                salary: parseInt(document.getElementById("getsal").value),
+                deptno: parseInt(document.getElementById("getdep").value)};
+                
+                var str = JSON.stringify(obj);
+
+                var objb = document.getElementById("print");
+                objb.innerText = str;
+
+                console.log(str);
+
+            }
+            function convertJSON(){
+
+                //strb = '{"empno":"1233","ename":"hfdb","job":"bfd","salary":"22","deptno":"22"}';
+                var strb = document.getElementById("getstr").value;
+                var objc = JSON.parse(strb);
+                getemp.value = objc.empno;
+                getename.value = objc.ename;
+                getjob.value = objc.job;
+                getsal.value = objc.salary;
+                getdep.value = objc.deptno;
+
+            }
+        </script>
+    </body>
+</html>

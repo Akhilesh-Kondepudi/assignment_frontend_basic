@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>JSON DATA</title>
+    </head>
+    <body>
+        <header><h1>Working with JSON</h1><hr/></header>
+        <section>
+            <article>
+                <input type="button" value="Get User Data" onclick="data()"/>
+                <p id="user"></p>
+                <img id="avatarimg" src=""/>
+            </article>
+        </section>
+        <script>
+            function data(){
+                var str = '{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"}';
+                var obj = JSON.parse(str);
+
+                var userObj = document.getElementById("user");
+                
+                var avatarimgObj = document.getElementById("avatarimg");
+
+                userObj.innerText = "User Id : " + obj.id + "\nFirst Name : " + obj.first_name + "\nLast Name : " + obj.last_name + "\nEmail : " + obj.email + "\nAvatar : ";
+                avatarimgObj.src = obj.avatar;
+            }
+        </script>
+    </body>
+</html>

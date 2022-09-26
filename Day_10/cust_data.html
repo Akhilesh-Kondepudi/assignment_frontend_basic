@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Customers</title>
+    </head>
+    <body>
+        <h1> Customer Data </h1><hr/>
+        <form>
+            <br/>
+            <label> Customer Name : </label>
+            <input id ="name" type="text" /><br/><br/>
+            <label> Joined Date : </label>
+            <input id="jdate" type="date" /><br/><br/>
+            <label> Favourite Color : </label>
+            <input id="fcolor" type="color" /><br/><br/>
+            <input type="button" value="Apply" onclick="fn_apply()"/>
+            <input type="button" value="Clear" onclick="fn_clear()"/><br/><br/>
+            <a href="changes.html">Link</a> 
+        </form>
+        <script>
+            function fn_apply(){
+                
+                var txtNameObj = document.getElementById("name");
+                var dtDateObj = document.getElementById("jdate");
+                var clrColorObj = document.getElementById("fcolor");
+
+                var dataObj = {}
+                dataObj.name = txtNameObj.value;
+                dataObj.date = dtDateObj.value;
+                dataObj.color = clrColorObj.value;
+
+                console.log(dataObj);
+
+                var dataStr = JSON.stringify(dataObj);
+                
+                localStorage.setItem("datakey",dataStr);
+
+            }
+
+            function fn_clear(){
+                localStorage.removeItem("datakey");
+            }
+        </script>
+    </body>
+</html>

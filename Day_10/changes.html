@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Welcome</title>
+    </head>
+    <body id="bod">
+        <h1 id="heading"></h1>
+        <p id="para"></p>
+        <script>
+           
+            // getting data from local storage
+            var detailsStr = localStorage.getItem("datakey");
+
+            // accessing the heading
+            var headObj = document.getElementById("heading");
+
+            // accesing the body tag for changing background color
+            var bdObj = document.getElementById("bod");
+            
+            // accessing the para tag
+            var paraObj = document.getElementById("para");
+
+            // checking if data is null
+            if(detailsStr == null){
+                headObj.innerText = "Welcome to Guest User";
+                bdObj.style.backgroundColor = "white";
+                paraObj.innerText = "Date is Empty";
+            }
+            
+            else{
+            // converting the string data we got from local storage to object
+            var detailsObj = JSON.parse(detailsStr);
+            
+            // adding text to the heading
+            headObj.innerText = "Welcome " + JSON.stringify(detailsObj.name);
+            
+            // changing the background color of body
+            bdObj.style.backgroundColor = detailsObj.color;
+
+            // printing date
+            paraObj.innerText = detailsObj.date;
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title> JSON | 2</title>
+    </head>
+    <body>
+        <header>
+            <h1> JSON Assignment 2 </h1><hr/>
+        </header>
+        <section>
+            <article>
+                <br/>
+                <input type="button" value="Stringify" onclick="objToString()"/>
+                <input type="button" value="Parse" onclick="stringToObj()"/>
+            </article>
+        </section>
+        <script>
+            function objToString(){
+                var obj = [
+                {empno: 1, ename: "Scott", job: "Analyst", salary:50000, deptno: 1},
+                {empno: 2, ename: "Smith", job: "Analyst", salary:50000, deptno: 1},
+                {empno: 3, ename: "Steve", job: "Senior Analyst", salary:80000, deptno: 2}];
+                console.log("Object format is ");
+                console.log(obj);
+                var str = JSON.stringify(obj);
+                console.log("String format is " + str);
+            }
+            function stringToObj(){
+                var  strb = '[{"empno":1,"ename":"Scott","job":"Analyst","salary":50000,"deptno":1},{"empno":2,"ename":"Smith","job":"Analyst","salary":50000,"deptno":1},{"empno":3,"ename":"Steve","job":"Senior Analyst","salary":80000,"deptno":2}]';
+				console.log("String format is ");
+                console.log(strb);
+				var objb =  JSON.parse(strb);
+                console.log("Object format is ");
+                console.log(objb);
+            }
+        </script>
+    </body>
+</html>
