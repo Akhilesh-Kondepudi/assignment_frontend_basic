@@ -1,0 +1,125 @@
+<html>
+    <head></head>
+    <body></body>
+    <script>
+
+        // charAt method --
+        var text = "HELLO WORLD";
+        var letter = text.charAt(0);
+        console.log(letter);
+
+        // concat method
+        var text1 = "sea";
+        var text2 = "food";
+        var result = text1.concat(text2);
+        console.log(result);
+        var result = text1.concat(" ",text2);
+        console.log(result);
+
+        // endsWith method
+        var text = "Hello world";
+        var result = text.endsWith("world");
+        console.log(result);
+
+        // includes method
+        var text = "Hello world, welcome to the universe.";
+        var result = text.includes("d");
+        console.log(result);
+
+        // indexOf method
+        var text = "Hello world, welcome to the universe.";
+        var result = text.indexOf("e");
+        console.log(result);
+
+        var text = "Hello world, welcome to the universe.";
+        var result = text.indexOf("e",5);
+        console.log(result);
+
+        // lastIndexOf method --
+        var text = "Hello planet earth, you are a great planet.";
+        var result = text.lastIndexOf("planet");
+        console.log(result);
+
+        var text = "Hello planet earth, you are a great planet.";
+        var result = text.lastIndexOf("planet",13);
+        console.log(result);
+        
+        // length method --
+        var text = "Hello World!";
+        var length = text.length;
+        console.log(length);
+
+        // repeat method
+        var text = "Hello world!";
+        var result = text.repeat(2);
+        console.log(result);
+
+        // replace method
+        var text = "Visit Microsoft!";
+        var result = text.replace("Microsoft", "W3Schools");
+        console.log(result);
+
+        // search method --
+        var text = "Mr. Blue has a blue house";
+        var position = text.search("Blue");
+        console.log(position);
+
+        // slice method --
+        var text = "Hello world!";
+        var result = text.slice(0, 8);
+        console.log(result);
+        
+        var result = text.slice(-5, -1);
+        console.log(result); 
+
+        // split method --
+        var text = "How are you doing today?";
+        var myArray = text.split(" ");
+        console.log(myArray);
+
+        // startsWith method --
+        var text = "Hello world, welcome to the universe.";
+        var result = text.startsWith("Hello");
+        console.log(result);
+
+        // substr method --
+        var text = "Hello world!";
+        var result = text.substr(1, 4);
+        console.log(result); 
+
+        // substring method --
+        var text = "Hello world!";
+        var result = text.substring(1, 4);
+        console.log(result);
+
+        // toLowerCase method
+        var text = "Hello World!";
+        var result = text.toLowerCase();
+        console.log(result);
+
+        // toUpperCase method
+        var text = "Hello World!";
+        var result = text.toUpperCase();
+        console.log(result);
+
+        // trim method
+        var text = "       Hello World!        ";
+        var result = text.trim();
+        console.log(result);
+
+        var text = "       Hello      World!        ";
+        var result = text.trim();
+        console.log(result);
+
+        // trimEnd method
+        var text1 = "     Hello World!     ";
+        var text2 = text1.trimEnd();
+        console.log(text2);
+
+        // trimStart method
+        var text1 = "     Hello World!     ";
+        var text2 = text1.trimStart();
+        console.log(text2);
+
+    </script>
+</html>
