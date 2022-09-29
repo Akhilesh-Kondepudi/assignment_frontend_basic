@@ -1,0 +1,16 @@
+@for $i from 1 to 7{
+
+    $default-size : 8px;
+    .ts-#{$i}{
+        font-size: 0.7 * (10-$i) * $default-size;
+    
+
+    @if($i==1 or $i==2 or $i==3){
+        color: red;
+    }
+
+    @if($i==4 or $i ==5 or $i==6){
+        color: green;
+    }
+}
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Login </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <br/>
+        <p class="h1 mx-5"> Login Modal</p>
+        <hr/>
+        <input class="btn btn-primary mx-5" data-bs-toggle="modal" data-bs-target="#loginModal" type="button" value="Show Login"/>
+    <div class="modal" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="h5">Login</p>
+                    <input class="btn btn-close" type="button" data-bs-dismiss="modal"/>
+                </div>
+                <div class="modal-body text-center">
+                    <input id="uid" class="w-75 p-2" type="text" placeholder="Username"/><br/><br/>
+                    <input class="w-75 p-2" type="password" placeholder="Password"/>
+                <div class="modal-footer">
+                    <input class="btn btn-primary" type="button" value="Login" onclick="fn_login()"/>
+                    <input class="btn btn-secondary" type="button" value="Cancel" data-bs-dismiss="modal"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    <script>
+        function fn_login(){
+            var idObj = document.getElementById("uid");
+            user1="Akhilesh";
+            user2="Akhil";
+            if (idObj.value == user1||idObj.value == user2){
+                alert("Welcome " + idObj.value);
+            }
+            else{
+                alert("Welcome Guest User");
+            }
+            var modalDOMObject = document.getElementById("loginModal");
+            var modalBSObject = bootstrap.Modal.getInstance(modalDOMObject);
+            modalBSObject.hide();
+        }
+    </script>
+</html>
