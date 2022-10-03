@@ -1,0 +1,52 @@
+@primary-color : black;
+@decoration : none;
+@import 'styless';
+.links{
+    color: @primary-color;
+    text-decoration: @decoration;
+    margin: 5px;
+    &:hover{
+        color: blue;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+}
+
+.shapeMixin(@shape) when (@shape="circle"){
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.circleClass{
+    .shapeMixin("circle")
+}
+
+.shapeMixin(@shape) when (@shape="square"){
+    height: 100px;
+    width: 100px;
+}
+
+.squareClass{
+    .shapeMixin("square")
+}
+
+.button-basic{
+    color: white;
+}
+
+.button-adv{
+    &:extend(.button-basic);
+    background-color: rgb(37, 37, 37);
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    margin-left: 520px;
+    text-align: center;
+
+    &:hover{
+        background-color: darkgray;
+        color: black;
+        cursor: pointer;
+    }
+}
